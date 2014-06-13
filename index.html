@@ -1,14 +1,37 @@
 ---
 layout: default
-title: Adam Kaplan
+title: Home
 ---
-<section class="intro">
-  <h1>Hello.</h1>
-  <p>My name is Adam Kaplan and I’m a designer. I create things for the web at <a href='http://www.8thlight.com/' target='_blank'>8th Light</a> in Chicago.</p>
-  <hr>
-  <p>View my <a href="https://github.com/aekaplan" target="_blank">code</a>
-  and check out my <a href="http://instagram.com/adamekaplan" target="_blank">photos</a>.</p>
 
-  <a href="https://twitter.com/helloadamkaplan" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @helloadamkaplan</a>
-  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-</section>
+<div class="posts">
+  {% for post in paginator.posts %}
+  <div class="post">
+    <h1 class="post-title">
+      <a href="{{ site.baseurl }}{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
