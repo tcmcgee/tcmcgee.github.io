@@ -1,0 +1,27 @@
+---
+layout: post
+title: SOLID Principles 
+---
+
+Recently I've spent some time reading about the <a href= "http://en.wikipedia.org/wiki/SOLID_(object-oriented_design)">SOLID Principles</a>, and I figure this post would be a great way for my blog to hit the ground running. And plan to talk a little bit about each principle and why they're important in software development.<br><br>
+
+
+The first principle is the <a href= "http://en.wikipedia.org/wiki/Single_responsibility_principle">Single Responsibility Principle.</a> This principle's message is rather
+Explicit, but basically each project should be separated into parts with each part serving only one 'responsibility' or a reason to change. The single responsibility principle is very important in developing clean code because it allows you to make isolate every part of your program and keeps each individual class more directed and
+Less cluttered and confusing. Without implementing this principle it seems very easily to unintentionally change a part of your program when changing a different
+Incorporated part. I believe the single responsibility principle is definitely one that I need to work on implementing better in my programming, I have the bad habit
+Of getting ahead of myself to try to get a certain feature to work and hard-code things that I probably shouldn't.
+<br>
+<br>
+The second principle is the <a href= "http://en.wikipedia.org/wiki/Open/closed_principle">Open/Closed Principle.</a> To me, this principle sounds a lot like "Do the work now, so you don't have to later." A good example of this is any object in java that implements comparable, you could go into your own classes, look at attributes of the objects that allow you to differentiate them and write a get method, compare the two and return the correct value, or you could just implement comparable, write a compareTo that works for all instances of the object, making it very easy to change if more information is given, etc. In my current version of <a href= "https://github.com/tcmcgee/TicTacToeRuby">Ruby TicTacToe</a> I really need to apply this principle to my output system, which not only is dependent on the console but also allows for very little abstraction if I wanted to play on a webserver or something similar. Applying the Open/Closed principle is a powerful way to keep your code clean and easy to maintain no matter what's thrown at it.
+<br>
+<br>
+The <a href = "http://en.wikipedia.org/wiki/Liskov_substitution_principle"> Liskov substitution principle</a> is a simple one, basically if any object is a subtype of another object, the object extending the original object shouldn't lose any of it's functionality and should behave similarly when called upon to serve a similar purpose. Currently working with ruby, my knowledge on syntax is not very broad so when I began my TicTacToe in the Winter I chose not to use any polymorphism, so none of my current projects utilize this principle.
+<br>
+<br>
+The fourth principle, <a href = "http://en.wikipedia.org/wiki/Interface_segregation_principle"> The Interface Segregation Principle</a> talks about how an Interface should be implemented in client code, emphasizing how little wiggle room one large interface provides and how several smaller interfaces allow easy refactoring. And more importantly, the smaller interfaces allow for more focused grouping so when a client needs to find a certain method that relates to xyz, they simply just open the xyzInterface and see the exact methods, that apply to their desired domain.
+<br>
+<br>
+Lastly, the <a href = "http://en.wikipedia.org/wiki/Dependency_inversion_principle"> Dependency Inversion Principle</a>. This principle earned it's name by 'inverting' the way people think about OOP (<a href = "http://en.wikipedia.org/wiki/Object-oriented_programming"> Object Oriented Programming</a>), because most people think of high-level components utilizing several low-level components leading to a system that gets more and more difficult to comprehend and -- usually -- becoming more capable. This principle dictates that this is not true and is in fact bad practice. Dependency Inversion suggests that high-level and low-level objects are separated into different packages and the high-order functions that will be used by the client are accompanied by an interface. In my opinion this is one of the most important principles to maintain code that not only fulfills the other SOLID principles but also greatly improves readability.
+<br>
+<br>
