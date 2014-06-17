@@ -12,6 +12,12 @@ Less cluttered and confusing. Without implementing this principle it seems very 
 Incorporated part. I believe the single responsibility principle is definitely one that I need to work on implementing better in my programming, I have the bad habit
 Of getting ahead of myself to try to get a certain feature to work and hard-code things that I probably shouldn't.
 <br>
+{% highlight java %}
+public static void main(String[] args)
+{
+	System.out.println("This is an example");
+}
+{% endhighlight %}
 <br>
 The second principle is the <a href= "http://en.wikipedia.org/wiki/Open/closed_principle">Open/Closed Principle.</a> To me, this principle sounds a lot like "Do the work now, so you don't have to later." A good example of this is any object in java that implements comparable, you could go into your own classes, look at attributes of the objects that allow you to differentiate them and write a get method, compare the two and return the correct value, or you could just implement comparable, write a compareTo that works for all instances of the object, making it very easy to change if more information is given, etc. In my current version of <a href= "https://github.com/tcmcgee/TicTacToeRuby">Ruby TicTacToe</a> I really need to apply this principle to my output system, which not only is dependent on the console but also allows for very little abstraction if I wanted to play on a webserver or something similar. Applying the Open/Closed principle is a powerful way to keep your code clean and easy to maintain no matter what's thrown at it.
 <br>
