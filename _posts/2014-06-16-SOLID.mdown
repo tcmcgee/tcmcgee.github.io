@@ -52,8 +52,7 @@ The <a href = "http://en.wikipedia.org/wiki/Liskov_substitution_principle"> Lisk
 ------BAD------
 {% highlight java %}
 public class wheel
-
-
+{
     int numSpokes;
     double diameter;
 
@@ -64,15 +63,14 @@ public class wheel
         this.diameter = diameter;
     }
 
-    public double area() {
+    public double area()
+    {
         return diameter * Math.PI;
     }
 }
 
 public class BikeWheel extends wheel
 {
-
-
 int numSpokes;
 double diameter;
 
@@ -95,6 +93,6 @@ The preceding code is poorly written for several reasons, firstly the user expec
 The fourth principle, <a href = "http://en.wikipedia.org/wiki/Interface_segregation_principle"> The Interface Segregation Principle</a> talks about how an Interface should be implemented in client code, emphasizing how little wiggle room one large interface provides and how several smaller interfaces allow easy refactoring. And more importantly, the smaller interfaces allow for more focused grouping so when a client needs to find a certain method that relates to xyz, they simply just open the xyzInterface and see the exact methods, that apply to their desired domain.
 <br>
 <br>
-Lastly, the <a href = "http://en.wikipedia.org/wiki/Dependency_inversion_principle"> Dependency Inversion Principle</a>. This principle earned it's name by 'inverting' the way people think about OOP (<a href = "http://en.wikipedia.org/wiki/Object-oriented_programming"> Object Oriented Programming</a>), because most people think of high-level components utilizing several low-level components leading to a system that gets more and more difficult to comprehend and -- usually -- becoming more capable. This principle dictates that this is not true and is in fact bad practice. Dependency Inversion suggests that high-level and low-level objects are separated into different packages and the high-order functions that will be used by the client are accompanied by an interface. In my opinion this is one of the most important principles to maintain code that not only fulfills the other SOLID principles but also greatly improves readability.
+Lastly, the <a href = "http://en.wikipedia.org/wiki/Dependency_inversion_principle"> Dependency Inversion Principle</a>. This principle earned it's name by 'inverting' the way people think about OOP (<a href = "http://en.wikipedia.org/wiki/Object-oriented_programming"> Object Oriented Programming</a>), because most people think of high-level components utilizing several low-level components leading to a system that gets more and more difficult to comprehend and -- usually -- becoming more capable. This principle dictates that this is not true and is in fact bad practice. For instance it's much cleaner code to have several objects of varying size which each extend the same basic class and apply varying levels of intricacy.Dependency Inversion suggests that high-level and low-level objects are separated into different packages and the high-order functions that will be used by the client are accompanied by an interface. In my opinion this is one of the most important principles to maintain code that not only fulfills the other SOLID principles but also greatly improves readability.
 <br>
 <br>
