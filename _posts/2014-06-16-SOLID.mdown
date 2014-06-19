@@ -47,7 +47,49 @@ As you can see, the code is in two classes, each with a descriptive name and a c
 The second principle is the <a href= "http://en.wikipedia.org/wiki/Open/closed_principle">Open/Closed Principle.</a> To me, this principle sounds a lot like "Do the work now, so you don't have to later." A good example of this is any object in java that implements comparable, you could go into your own classes, look at attributes of the objects that allow you to differentiate them and write a get method, compare the two and return the correct value, or you could just implement comparable, write a compareTo that works for all instances of the object, making it very easy to change if more information is given, etc. In my current version of <a href= "https://github.com/tcmcgee/TicTacToeRuby">Ruby TicTacToe</a> I really need to apply this principle to my output system, which not only is dependent on the console but also allows for very little abstraction if I wanted to play on a webserver or something similar. Applying the Open/Closed principle is a powerful way to keep your code clean and easy to maintain no matter what's thrown at it.The code example above also applys to this principle, in each objects instantiation. Instead of being hard coded for each shape (RectangleCalculator, etc.) they just take a shape that is most likely abstract, which is the parent of many other objects each with a unique way to calculate the area defined within each child class.
 <br>
 <br>
-The <a href = "http://en.wikipedia.org/wiki/Liskov_substitution_principle"> Liskov substitution principle</a> is a simple one, basically if any object is a subtype of another object, the object extending the original object shouldn't lose any of it's functionality and should behave similarly when called upon to serve a similar purpose. Currently working with ruby, my knowledge on syntax is not very broad so when I began my TicTacToe in the Winter I chose not to use any polymorphism, so none of my current projects utilize this principle.
+The <a href = "http://en.wikipedia.org/wiki/Liskov_substitution_principle"> Liskov substitution principle</a> is a simple one, basically if any object is a subtype of another object, the object extending the original object shouldn't lose any of it's functionality and should behave similarly when called upon to serve a similar purpose. This principle is easier demonstrated then explained, please reference the following code.
+<br>
+------BAD------
+{% highlight java %}
+public class wheel
+
+
+    int numSpokes;
+    double diameter;
+
+    public wheel(){}
+    public wheel(int numSpokes, double diameter)
+    {
+        this.numSpokes = numSpokes;
+        this.diameter = diameter;
+    }
+
+    public double area() {
+        return diameter * Math.PI;
+    }
+}
+
+public class BikeWheel extends wheel
+{
+
+
+int numSpokes;
+double diameter;
+
+public BikeWheel(int numSpokes, double diameter)
+    {
+        this.numSpokes = numSpokes;
+        this.diameter = diameter;
+    }
+
+    public int area()
+    {
+        return (int) (diameter * Math.PI) / numSpokes;
+    }
+}
+{% endhighlight %}
+<br>
+The preceding code is poorly written for several reasons, firstly the user expects BikeWheel to resemble a wheel in it's implementation but it's one method area() has two different returns types!! Secondly they're not ever similar in their function the first method returns the area of the wheel, the BikeWheel returns the area between each spoke. In a good example the child class would resemble the parent class much more.
 <br>
 <br>
 The fourth principle, <a href = "http://en.wikipedia.org/wiki/Interface_segregation_principle"> The Interface Segregation Principle</a> talks about how an Interface should be implemented in client code, emphasizing how little wiggle room one large interface provides and how several smaller interfaces allow easy refactoring. And more importantly, the smaller interfaces allow for more focused grouping so when a client needs to find a certain method that relates to xyz, they simply just open the xyzInterface and see the exact methods, that apply to their desired domain.
