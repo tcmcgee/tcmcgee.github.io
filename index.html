@@ -8,6 +8,18 @@
 $(document).ready(function(){
 	loadHeader();
 	showWidgets();
+  $(".contact").click(function(){
+ 	$(".contact").text('Tom@TomCMcGee.com');
+  });
+
+$('.contact').on('mouseover', function(){ 
+	$('.contact').css('color','#00ff00');
+ });
+
+$('.contact').on('mouseout', function(){ 
+	$('.contact').css('color','white');
+  });
+
 });
 
 </script>
@@ -36,6 +48,9 @@ $(document).ready(function(){
  <a href="https://www.linkedin.com/pub/tom-mcgee/72/193/477">
 <img class='clickables'border="0" alt="LinkedIn" src="public/images/linkedin.png" width="30" height="30">
 </a>
+
+<br>
+<h3 class ='clickables contact'><u>E-Mail</u></h3>
 
 </body>
 <script>
