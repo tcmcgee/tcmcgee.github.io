@@ -1,0 +1,26 @@
+h1 {
+    color: #00ff00;
+    font-family:"Lucida Console", Monaco, monospace;
+    font-size:40px;
+    white-space: nowrap;
+    display:inline;
+}
+
+.blinker{	
+	color:#00ff00;
+	height: 35px;
+	width: 5px; 
+}
+
+.name{
+	display:none;
+}
+.clickables{
+	display:none;
+}
+.divider{
+    width: 100%;
+}
+.clickables{
+	text-align:left;
+}
