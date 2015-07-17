@@ -6,7 +6,7 @@ function loadHeader()
 
 function showWidgets()
 {
-	$('.clickables').delay(3000).fadeIn('slow');
+	$('.clickables').delay(3200).fadeIn('slow');
 }
 
 function moveRight()
