@@ -7,6 +7,7 @@ function loadHeader()
 function showWidgets()
 {
 	$('.clickables').delay(3200).fadeIn('slow');
+	$('.description').delay(3200).fadeIn('slow');
 }
 
 function moveRight()
@@ -23,6 +24,7 @@ function moveRight()
 	$('.e').delay(2700).fadeIn(100);
 	$('.e2').delay(2900).fadeIn(100);
 	$('.filler').delay(2900).fadeOut(100);
+	
 }
 function blinker(){
 $(".blinker").fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200);
