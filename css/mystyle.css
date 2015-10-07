@@ -28,12 +28,31 @@ h3 {
 
 .name{
 }
-.clickables{
+.hiddenAtStart{
 	display:none;
+}
+.clickables{
+	text-align:left;
 }
 .divider{
     width: 100%;
 }
-.clickables{
-	text-align:left;
+.portfolioDiv{
+	text-align:center;
+	padding-right:50px;
+	display: inline-block;
+}
+
+.portfolioText{
+	margin:auto;
+	text-align:center;
+	color: #F4F4F4;
+	opacity: 0.8;
+	font-size: 30px;
+}
+.portfolio
+{
+	border-style: solid;
+    border-color: #FFFFFF;
+	border-radius:10px;
 }

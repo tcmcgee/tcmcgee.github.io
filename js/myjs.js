@@ -6,13 +6,26 @@ function loadHeader()
 
 function showWidgets()
 {
-	$('.clickables').delay(3200).fadeIn('slow');
-	$('.description').delay(3200).fadeIn('slow');
+	$('.hiddenAtStart').delay(3200).fadeIn('slow');
 }
 
+function blinker(){
+$(".blinker").fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200);
+}
 
-
-function moveRight()
+function instaName()
+{
+	setTimeout("$('.name').append('T');",1);
+	setTimeout("$('.name').append('o');",4);
+	setTimeout("$('.name').append('m');",8);
+	setTimeout("$('.name').append(' ');",12);
+	setTimeout("$('.name').append('M');",14);
+	setTimeout("$('.name').append('c');",19);
+	setTimeout("$('.name').append('G');",22);
+	setTimeout("$('.name').append('e');",24);
+	setTimeout("$('.name').append('e');",27);
+}
+function animateName()
 {
 	setTimeout("$('.name').append('T');document.getElementById('click_noise1').play();",100);
 	setTimeout("$('.name').append('o');document.getElementById('click_noise3').play();",400);
@@ -21,17 +34,6 @@ function moveRight()
 	setTimeout("$('.name').append('M');document.getElementById('click_noise3').play();",1400);
 	setTimeout("$('.name').append('c');document.getElementById('click_noise1').play();",1900);
 	setTimeout("$('.name').append('G');document.getElementById('click_noise3').play();",2200);
-	setTimeout("$('.name').append('e');document.getElementById('click_noise4').play();",2500);
+	setTimeout("$('.name').append('e');document.getElementById('click_noise4').play();",2400);
 	setTimeout("$('.name').append('e');document.getElementById('click_noise4').play();",2700);
-	//$('.filler').delay(2900).fadeOut(100);
-
-}
-function blinker(){
-$(".blinker").fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200).delay(100).fadeIn(200).fadeOut(200);
-}
-function animateName()
-{
-	var name = 'Tom McGee'
-
-	moveRight();
 }
