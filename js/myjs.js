@@ -6,7 +6,7 @@ function loadHeader()
 
 function showWidgets()
 {
-	$('.hiddenAtStart').delay(3200).fadeIn('slow');
+	$('.hiddenAtStart').delay(0).fadeIn('slow');
 }
 
 function blinker(){
