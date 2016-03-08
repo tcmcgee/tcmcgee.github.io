@@ -25,10 +25,10 @@ disqus: mydisqus
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
-linkedin: https://www.linkedin.com/in/tom-mcgee-47719372
+linkedin: tom-mcgee-47719372
 #youtube: myyoutube
-spotify: myspotify
-github: https://github.com/tcmcgee
+spotify: tmmcgee13
+github: tcmcgee
 #medium: medium
 #email: 
 
@@ -42,7 +42,7 @@ width: normal
 # paginate_path: "blog/:num/"
 
 # if you don't need projects, comment the *projects* configs below
-projects: true
+#projects: true
 
 # if you don't need "about" or "blog", comment them out below
 about: true
