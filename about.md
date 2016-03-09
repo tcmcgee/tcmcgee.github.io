@@ -7,7 +7,7 @@ permalink: /about/index.html
 
 <p></p>
 
-<p>Hello friendss</p>
+<p>Welcome</p>
 
 <h2>Skills</h2>
 
