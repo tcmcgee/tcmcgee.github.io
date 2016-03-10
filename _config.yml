@@ -14,7 +14,7 @@ permalink: /:title/
 markdown: kramdown
 highlighter: rouge
 
-analytics-google: 'UA-52343892-1'
+analytics-google: 'UA-65003643-1'
 
 # if you don't want comments in your posts, set to false
 disqus: mydisqus
