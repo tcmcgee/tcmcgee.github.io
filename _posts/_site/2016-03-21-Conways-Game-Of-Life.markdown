@@ -1,0 +1,25 @@
+----
+title: "Conway's Game Of Life"
+layout: post
+date: 2016-03-21 9:20
+tag:
+- blog
+- 8thLight
+- TDD
+- Game Of Life
+blog: true
+---
+
+# Conway's Game Of Life
+
+For anyone not familiar with Conway's Game Of Life, I'll give you a quick rundown. A cell has two explicit states, alive or dead, and is associated with a position on the grid. Each position on the grid has eight neighboring positions which are each also associated with a cell. Now the rules are simple, if a living cell has two or three neighbors it's alive in the next generation (or board state / tick). If a dead cell has exactly three neighbors a new cell is born in the next generation, I could go on to explain Conway's logic as to why a cell dies or is born but in the end those if neither of the two mentioned conditions are met a cell dies. If curiosity gets the better of you check out more of Conway's Game Of Life [here](en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+). 
+
+# Implementation
+
+When I was assigned the task to create my own Infinite Conway's Game of Life, I was also assigned to read *The Four Rules of Simple Design*, and brainstorm and implement a couple of my own versions of the game. Since it was specified that my game needed to be able to have a living cell anywhere, not just the viewable board, the initial thought of a 2D array was out of the question since it has fixed bounds and although initializing a new array to accomodate any new cells in the next generation is possible, I knew there had to be a better way. When I thought about the way the algorithm had to work I came up with a few criteria.
+
+* Each living cell would have to check it's neighbors to see if it's alive in the next generation.
+* Each empty location needed to check it's neighbors to see if a cell would be born into it in the next generation.
+
+Obviously it wasn't going to be possible for infinite dead cells to check all their neighbors and see if they would be alive in the next generation, so it made the most sense to check every neighbor of living cells to see if they have three living neighbors. Sadly this involves cells getting checking their neighbors multiple times which results in 8 more function calls than necessary, but without checking cells in the next generation, I didn't see a good way to do that. Maybe I can find an elegant solution after some refactoring. The structure of my final version resulted in a World class with a Dictionary. The Keys were locations and the values were living cells, this way when checking looking for neighbors that are alive it can just try every location and see if a living cell is returned. It was a simple and clear way to find cells, and the result made it simple to understand what was going on. To simplify it even further, I could make it a dictionary with keys as Locations and values as booleans representing if a cell is alive or not and save the step of passing objects around and calling IsAlive() on them. 
