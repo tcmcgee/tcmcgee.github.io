@@ -1,0 +1,41 @@
+---
+title: "Bugs"
+layout: post
+date: 2016-03-23 11:20
+tag:
+- blog
+- 8thLight
+- TDD
+- Bugs
+- Negamax
+- TTT
+blog: true
+---
+
+Thinking of things to blog about it hard, so today I'm just going to comprehensively cover a bug I was facing in my implementation of the negamax algorithm in C# Tic Tac Toe!
+
+# Negamax
+In case you don't already know, negamax is a tic tac toe algorithm that plays every possible game and determines which one of the available moves give the computer the best chance of not losing.
+
+# THE BUG
+I had a version of negamax working what seemed to be correct, except in the last couple moves the computer would simply take the first space available. I thought it had to do with the way I was weighing the values, but after a lot of playing with the numbers I was wrong. When Negamax is simulating all possible board states it needs to return a value when there's a winner and a different value when there's a tie.
+
+
+    
+    if ((game.IsGameOver(turn) || game.IsGameOver(!turn)) && !game.IsTie())
+     {
+    	return -10 * ((boardArray.Length) - depth);
+     }
+     else if (game.IsTie())
+     {
+     return 0;
+	}
+    
+Logically this seems to make sense, if you knew IsGameOver() took the boolean turn which and returned true if the game is over. Now IsGameOver() checks to see if there isTie() as that would mean the game was over, and isTie() only checks to see that no tiles in the board are empty. The resulting behavior was, if the board is full and someone had won it wouldn't return the correct value, -10 * length - depth, it would go to the else if and return 0. This was tricky to figure out as it seemed to be working fine till the very end. The fix was simple once I figured it out, and in my opinion made the code much much easier to read.
+
+    if (game.HasWinner())
+    {
+    	return -10 * ((boardArray.Length) - depth);
+    }
+    
+In retrospect it was pretty obvious, but Negamax now works as intended and I'm almost ready for the IPM on Monday!
