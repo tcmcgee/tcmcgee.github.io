@@ -21,7 +21,7 @@ and even when it does my code still needs refactoring. Now refactoring to me is 
 the code you've written after making any significant change. Whether this change is extending your application with a new feature,
 or changing the entire way you store data usually there's some pretty large changes to be made.
 
-#Baby Steps
+# Baby Steps
 
 One of the most difficult parts of making any significant change to a program is how you go about it, parameters need to be changed,
 the way things are called, and the types of what is calling them are all over the place compared to your initial implementation.
