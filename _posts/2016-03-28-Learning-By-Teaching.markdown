@@ -25,4 +25,4 @@ Revisiting the basics and eventually diving into topics like cloning, how he wou
 (forking, merging, issues, and pull requests), and even dealing with merge conflicts, I found myself much more confident in the topics
 simply from explaining them at their most fundamental levels. All of the review came with the added bonus of teaching a friend something
 I really enjoy and watching him grasp the concepts. I see why good teachers love their jobs so much, and hope to continue sharing my (admittedly small) 
-knowledge base with them. Who knows, maybe I'll even get a Waza project going for this week!
+knowledge base with them. Who knows, maybe I'll even get a Waza project going with them for this week! 
