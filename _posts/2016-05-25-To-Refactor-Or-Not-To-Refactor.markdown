@@ -1,0 +1,30 @@
+---
+title: "To Refactor or Not To Refactor, that is the question"
+layout: post
+date: 2016-05-25 09:00
+tag:
+- blog
+- 8thLight
+- refactoring
+blog: true
+---
+# Refactoring 
+
+Right now I'm working on an HTTP Server written in Swift. Aside from the initial connecting and reading the request, it has 
+been a pretty straight forward project. There's one situation in particular that stands out to me as an example of code that
+might need to be refactored but might be fine the way it is.
+
+# Building an HTTP Response
+
+After I read the HTTP Request, and parse it accordingly using the request method (GET, POST, DELETE, OPTIONS, etc.) I'm able
+determine whether or not it's a valid request for my server, and if it is does perform a corresponding action.
+In the HTTP Response my server will eventually send back, there's a status code, response headers and a response body.
+Since the status code, and headers are variable depending on the requests body, `getRequestBody()` is called first and sets the statusCode and headers for the body.
+This way of doing things is far from ideal, since `getResponseBody()` ends up with side effects (internal variables that are changed, but not the value returned).
+I have a mini review board on Friday, where I will hopefully receive some feedback about this particular section of my code but in the mean time, I've come up with a few work arounds.
+
+# Work Arounds
+
+The best answer I can think of to the problem is having one function, called `BuildResponse()` that either performs all of the actions required and then returns the complete Response object, with one method call. I think I will probably try to do this before my Mini Review Board on Friday.
+
+
