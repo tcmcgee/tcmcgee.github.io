@@ -1,5 +1,5 @@
 ---
-title: “When to Stop and Think"
+title: When to Stop and Think
 layout: post
 date: 2016-05-27 09:00
 tag:
@@ -9,7 +9,6 @@ tag:
 - The Four Rules Of Simple Design
 blog: true
 ---
-
 # Refactoring
 
 In my opinion, knowing when to refactor and implement a design is one of the hardest parts of test driven development. After how many simple features are added or tests written should I sit down and switch over my design.
