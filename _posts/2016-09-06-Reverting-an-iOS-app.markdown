@@ -23,7 +23,7 @@ Now those of you who use the app, and have updated it know that version 5 has no
 
 ![IMAGE OF NIKE RUN CLUB REVIEWS](http://www.tomcmcgee.me/assets/images/NRCReview.png)
 
-When Megan updated she: Lost her entire training plan, was unable to recover the same version of her plan (Instead of distance to run they now use time to run), and a complete UI overhaul. It's safe to say she wasn't one bit pleased. I took her disapproval as a challenge, and a chance to prove that I've learned a thing or two sitting on the computer all day and got to work. If you follow this guide step by step you should be able to download and use any(?) version of an iOS app that's compatible with your device.
+When Megan updated she: Lost her entire training plan, was unable to recover the same version of her plan (Instead of distance to run they now use time to run), and a complete UI overhaul. It's safe to say she wasn't one bit pleased. I took her disapproval as a challenge, and a chance to prove that I've learned a thing or two sitting on the computer all day and got to work. If you follow this guide step by step you should be able to download and use any version of an iOS app that's compatible with your device.
 
 # The Solution
 
