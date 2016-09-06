@@ -36,6 +36,7 @@ When Megan updated she: Lost her entire training plan, was unable to recover the
 * [Charles](https://www.charlesproxy.com/)
 
 ## Easy Guide
+
 ### Part 1 - Setup
 * Download Charles [here](https://www.charlesproxy.com/download/)
 * Open Charles and Grant Permissions, enter your password.
