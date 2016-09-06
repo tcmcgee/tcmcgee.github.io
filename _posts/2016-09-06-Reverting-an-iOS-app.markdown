@@ -52,7 +52,7 @@ When Megan updated she: Lost her entire training plan, was unable to recover the
 ![Charles Buy-iTunes](http://www.tomcmcgee.me/assets/images/Charles-BuyiTunes.png)
 * In the previous image you should see a request to 'p27-buy.itunes.apple.com' find the first occurrence of a 'buy.itunes.apple.com' url. Control + Click on it, and click 'Enable SSL Proxying'
 * Back in iTunes  Go to 'My iPhone Apps' Delete the app again, and select 'move to trash'.
-* Click the small broom in the top right of Charles to clear it.
+* Click the small broom in the top left of Charles to clear it.
 * Navigate back to the 'App Store' portion of iTunes and click on the App's image to refresh the page.
 * Download the Nike Run Club App Again
 * In Charles find your 'buy.itunes.apple.com' URL and use the tiny arrow on it's right to expand it. Open another folder called 'WebObjects' and then each of it's subfolders. In the end you should see something called 'buyProduct'.
@@ -61,7 +61,7 @@ When Megan updated she: Lost her entire training plan, was unable to recover the
 ![BuyProductClick](http://www.tomcmcgee.me/assets/images/Charles-BuyProductClick.png)
 * In the bottom portion right under 'XML Text' scroll down through the XML until you see a key called 'softwareVersionExternalIndentifiers' with an array of integer tags beneath it. It should look like this: ![software versions](http://www.tomcmcgee.me/assets/images/Charles-SoftwareVersions.png)
 * Scroll to the very bottom of the list and count back how many versions you want. Since i'm on version 5.0.2 I want to go back from 5.0.2 through 5.0.1, and 5.0.0 to 4.8.7, so my identifier should be the fourth version from the bottom. In general it seems I always need to add one, so the **fifth** from the bottom!
-* Copy the code for the selected version (fifth from the bottom for NRC) and paste it somewhere you won't lost it. The code for version 4.8.7 of Nike Run Club is '816668851' I don't think that should change so you can probably use mine.
+* Copy the code for the selected version (fifth from the bottom for NRC) and paste it somewhere you won't lose it. The code for version 4.8.7 of Nike Run Club is '816668851' I don't think that should change so you can probably use mine.
 ![VersionSelection](http://www.tomcmcgee.me/assets/images/Charles-VersionSelection.png)
 
 * To check which version you are selecting copy the 'softwareVersionExternalIdentifier' and click on the blue pen in the top toolbar of Charles. (This should open a new 'buyProduct' with a blue pen next to it instead of curly braces.)
@@ -72,6 +72,7 @@ When Megan updated she: Lost her entire training plan, was unable to recover the
 * This may open a new instance of charles and take a moment, but should open a new curly Braced 'buyProduct' which looks a lot like the first. If you scroll down far enough you'll find a key called 'metadata' which contains some information about the app. One of the bits it contains is the 'bundleShortVersionString' this should be the version version of the app you selected! Mine is 4.8.7! We're onto something here...
 ![VersionChecking](http://www.tomcmcgee.me/assets/images/Charles-VersionChecking.png)
 * Repeat step 2 until the version in the metadata is the version you want to download!
+
 ### Step 3 - Substituting the Version
 * Now you have the right version identification code (in my case '816668851') and you need to actually download it.
 * Control + Click on the last curlyBraced (NOT BluePen) version of 'buyProduct' and click 'BreakPoints' towards the bottom.
