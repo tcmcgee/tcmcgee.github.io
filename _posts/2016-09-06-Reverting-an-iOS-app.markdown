@@ -1,5 +1,5 @@
 ---                          
-title: Tutorial: Downgrading an iOS App's Version
+title: Tutorial - Downgrading an iOS App's Version
 layout: post         
 date: 2016-09-06 09:00                         
 tag:                             
@@ -36,12 +36,12 @@ When Megan updated she: Lost her entire training plan, was unable to recover the
 * [Charles](https://www.charlesproxy.com/)
 
 ## Easy Guide
-### Part 1 -- Setup
+### Part 1 - Setup
 * Download Charles [here](https://www.charlesproxy.com/download/)
 * Open Charles and Grant Permissions, enter your password.
 * In iTunes go to 'My iPhone Apps' and Delete Nike+ Run Club if it's there
 
-### Step 2 -- Identify the version 
+### Step 2 - Identify the version 
 * In iTunes navigate to the Nike+ Run Club app page [here (click View in iTunes)](https://itunes.apple.com/us/app/nike+-run-club/id387771637?mt=8)
 * Then make sure Charles looks something like this ![CHARLES SAMPLE](http://www.tomcmcgee.me/assets/images/CharlesSample.png)
 * Go back to iTunes and download the App's latest version ![NRC Download Image](http://www.tomcmcgee.me/assets/images/NRCDownload.png)
@@ -76,12 +76,12 @@ When Megan updated she: Lost her entire training plan, was unable to recover the
 * Now go back into iTunes, navigate to 'My iPhone Apps' control + click the app, delete it and move it to the trash.
 * In the App Store download the application again, only this time Charles should pop up! It's letting you edit the request before it is sent!
 * In the tabs at the top select 'Edit Request' and then in the tabs at the bottom select 'XML Text'. In the line following the 'appExtVrsId' delete the number between the '<string>' tags and replace it with your own version.
-* Hit Execute -- then execute again when it pops up a second time.
+* Hit Execute - then execute again when it pops up a second time.
 * After the download is finished navigate to 'My iPhone Apps' in iTunes, control + click on your app select 'Get Info' and check out the version.
 ![CharlesSuccess](http://www.tomcmcgee.me/assets/images/Charles-Success.png)
 * It worked! I successfully downloaded Version 4.8.7 instead of 5.0.3!
 
-### Step 4 -- Putting the old version on your iPhone
+### Step 4 - Putting the old version on your iPhone
 * **NOTE:** You must delete the app from your iPhone before starting the step or the process will not work!
 * Plug your phone into your computer with the old version in iTunes
 * Navigate to your iPhone (this probably happens automatically)
