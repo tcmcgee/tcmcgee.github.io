@@ -1,7 +1,7 @@
 ---
 title: Pairing Tour Day 1
 layout: post
-date: 2016-11-01 09:00
+date: 2016-11-07 09:00
 tag:
 - blog
 - Apprenticeship
