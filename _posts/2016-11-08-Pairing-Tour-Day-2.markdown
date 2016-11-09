@@ -10,7 +10,7 @@ tag:
 blog: true
 ---
 
-# Pairing Tour Day two
+# Pairing Tour Day Two
 
 The second day of my pairing tour was spent with Rob L. I finally managed to gain clearance to his building, and caught him at the start of a new project. This project is essentially to convert all the current applications over to continuous deployment. The company is fairly large so the main problem with converting is standardizing all the code bases, especially how configurable values are stored. In this particular system, every project is deployed with various configuration files, and each file is deployed separately to a database, this is because some values need to be changed 'on the fly' and others do not. The new system will standardize where configuration files are located (is it ./conf, ./confs or ./configuration), and how they're stored, `key=value` vs `{"key": "value"}` vs etc. And finally allow a new deploy plug-in that me and Rob started working on today to aggregate all of these values and add them to a metadata file, which then promotes *only* certain values through environments, ex: Dev to QA: values are 'overridden' by users in Dev, in some cases it's environmental variables like the endpoints to hit, in other cases its fine tuning of certain values for correct performance, we want to throw out the endpoints and overwrite them to the QA specific ones (eventually production specific), yet keep the fine-tuned values since they're now supposed to be more correct then their default values.
 
